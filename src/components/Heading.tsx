@@ -3,7 +3,7 @@ type HeadingProps = {title: string}
 const Heading = () => {
   return (
     <div>
-      Heading
+      Heading eoooooooo
     </div>
   )
 }
