@@ -45,7 +45,7 @@ function App() {
   return (
   <>
   <Heading title={'Hello Heading'} />
-  <Section title='NEW SECTION'><h3>This is my section</h3></Section>
+  <Section title='NEW SECTION'>This is my section</Section>
   <Counter />
   <List items={["coffee", "tacos", "code"]} render = {(item: string)=><span className='gold'>{item}</span>} />
    
