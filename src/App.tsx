@@ -4,7 +4,7 @@ import { Section } from './components/Section'
 import Counter from './components/Counter'
 import List from './components/List'
 import { useState, useEffect, useCallback, useMemo, useRef , MouseEvent, KeyboardEvent } from 'react'
-
+import { CounterProvider, initState } from './context/CounterContext'
 
 interface User{
   id: number,
@@ -46,7 +46,10 @@ function App() {
   <>
   <Heading title={'Hello Heading'} />
   <Section title='NEW SECTION'>This is my section</Section>
-  <Counter />
+
+  <CounterProvider count={initState.count} text={initState.text}>
+  <Counter>{(num:number)=><>Current count: {num}</>}</Counter>
+  </CounterProvider>
   <List items={["coffee", "tacos", "code"]} render = {(item: string)=><span className='gold'>{item}</span>} />
    
   <div className='App'>
